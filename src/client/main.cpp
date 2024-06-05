@@ -284,8 +284,8 @@ int main()
 				throw std::runtime_error("BOIII needs an active internet connection for the first time you launch it.");
 			}
 
-			const auto client_binary = "BlackOps3.exe"s;
-			const auto server_binary = "BlackOps3_UnrankedDedicatedServer.exe"s;
+			const auto client_binary = "BlackOps300.exe"s;
+			const auto server_binary = "BlackOps300_UnrankedDedicatedServer.exe"s;
 
 			const auto has_client = utils::io::file_exists(client_binary);
 			const auto has_server = utils::io::file_exists(server_binary);
@@ -295,7 +295,7 @@ int main()
 			if (!has_client && !has_server)
 			{
 				throw std::runtime_error(
-					"Can't find a valid BlackOps3.exe or BlackOps3_UnrankedDedicatedServer.exe. Make sure you put boiii.exe in your Black Ops 3 installation folder.");
+					"Can't find a valid BlackOps300.exe or BlackOps300_UnrankedDedicatedServer.exe. Make sure you put BlackOps3.exe (the old boiii.exe) in your Black Ops 3 installation folder.");
 			}
 
 			if (!is_server)
